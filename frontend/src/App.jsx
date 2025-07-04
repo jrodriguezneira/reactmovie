@@ -15,7 +15,7 @@ function App() {
       url: "https://image.tmdb.org/t/p/w500/8h58n2b1c4d3a5e6f7d8e9f0g1h2i3j4.jpg"
     }} />
 
-    <MovieCard movie={{
+    <MovieCard movie={{ 
       title: "terminator",
       release_date: "2010-07-16",
       url: "https://image.tmdb.org/t/p/w500/8h58n2b1c4d3a5e6f7d8e9f0g1h2i3j4.jpg"
