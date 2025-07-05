@@ -1,5 +1,6 @@
 import MovieCard from "../components/MovieCard";
 import { useState } from 'react'
+import "../css/Home.css";
 
 
 function Home() {
@@ -7,6 +8,16 @@ function Home() {
     const [searchQuery, setSearchQuery] = useState("");
 
   const movies = [
+    {
+      title: "Inception",
+      release_date: "2010-07-16",
+      url: "https://image.tmdb.org/t/p/w500/8h58n2b1c4d3a5e6f7d8e9f0g1h2i3j4.jpg"
+    },
+    {
+      title: "Inception",
+      release_date: "2010-07-16",
+      url: "https://image.tmdb.org/t/p/w500/8h58n2b1c4d3a5e6f7d8e9f0g1h2i3j4.jpg"
+    },
     {
       title: "Inception",
       release_date: "2010-07-16",
