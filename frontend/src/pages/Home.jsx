@@ -1,34 +1,36 @@
 import MovieCard from "../components/MovieCard";
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import "../css/Home.css";
+import { searchMovies,getPopularMovies } from "../services/api";
 
 
 function Home() {
 
     const [searchQuery, setSearchQuery] = useState("");
+    const [movies, setMovies] = useState([]);
+    const [error, seterror] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-  const movies = [
-    {
-      title: "Inception",
-      release_date: "2010-07-16",
-      url: "https://image.tmdb.org/t/p/w500/8h58n2b1c4d3a5e6f7d8e9f0g1h2i3j4.jpg"
-    },
-    {
-      title: "Inception",
-      release_date: "2010-07-16",
-      url: "https://image.tmdb.org/t/p/w500/8h58n2b1c4d3a5e6f7d8e9f0g1h2i3j4.jpg"
-    },
-    {
-      title: "Inception",
-      release_date: "2010-07-16",
-      url: "https://image.tmdb.org/t/p/w500/8h58n2b1c4d3a5e6f7d8e9f0g1h2i3j4.jpg"
-    },
-    {
-      title: "The Dark Knight",
-      release_date: "2008-07-18",
-      url: "https://image.tmdb.org/t/p/w500/8h58n2b1c4d3a5e6f7d8e9f0g1h2i3j4.jpg"
-    }
-  ];
+
+    useEffect(() => {
+        const loadPopularMovies = async () => {
+          try {
+            const popularMovies = await getPopularMovies();  
+            setMovies(popularMovies);
+          } catch (err) {   
+            console.error("Error fetching movies:")
+            seterror("Failed to fetch movies",err);
+
+          } finally { 
+            setLoading(false);
+          } 
+        }
+        loadPopularMovies();
+      }, []); 
+
+    
+
+ 
 
   const handleSearch = (e) => {
     e.preventDefault();
