@@ -61,3 +61,8 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+/* Keep single search-result cards from stretching full width */
+.movies-grid {
+  justify-items: center;
+}

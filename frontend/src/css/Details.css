@@ -1,0 +1,109 @@
+.details-page {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.details-hero {
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+
+.details-hero-overlay {
+  backdrop-filter: blur(0.5px);
+  background: linear-gradient(rgba(6,6,6,0.6), rgba(6,6,6,0.9));
+  padding: 2rem 0;
+}
+
+.details-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.details-poster img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.details-info {
+  padding-top: 0.5rem;
+}
+
+.details-title {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.details-year {
+  font-weight: 600;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.details-meta {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.details-overview {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.details-extra {
+  display: flex;
+  gap: 1.5rem;
+  color: #ddd;
+  margin-top: 1rem;
+}
+
+.details-trailer {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #fff;
+}
+
+.details-trailer h3 {
+  margin: 0 0 0.75rem 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+  .details-inner {
+    grid-template-columns: 140px 1fr;
+  }
+  .details-hero {
+    padding: 2rem 0.5rem;
+  }
+  .details-title {
+    font-size: 1.4rem;
+  }
+}
+
+.details-empty {
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+}

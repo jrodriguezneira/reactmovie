@@ -12,3 +12,15 @@ const response = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=
 const data = await response.json();
 return data.results;    
 }
+
+export const getMovieDetails = async (id) => {
+	const response = await fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}`);
+	const data = await response.json();
+	return data;
+};
+
+export const getMovieVideos = async (id) => {
+  const response = await fetch(`${BASE_URL}/movie/${id}/videos?api_key=${API_KEY}`);
+  const data = await response.json();
+  return data.results || [];
+};

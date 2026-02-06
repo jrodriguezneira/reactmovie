@@ -7,6 +7,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  max-width: 300px;
+  width: 100%;
 }
 
 .movie-card:hover {
@@ -48,7 +50,7 @@
   opacity: 1;
 }
 
-.favorite-btn {
+.favorite-button {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -65,11 +67,10 @@
   transition: background-color 0.2s;
 }
 
-.favorite-btn:hover {
+.favorite-button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
-.favorite-btn.active {
+.favorite-button.active {
   color: #ff4757;
 }
 
@@ -116,7 +117,7 @@
     padding: 0.75rem;
   }
 
-  .favorite-btn {
+  .favorite-button {
     width: 32px;
     height: 32px;
     font-size: 1.2rem;
